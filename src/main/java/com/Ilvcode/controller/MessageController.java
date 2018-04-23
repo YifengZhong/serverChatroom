@@ -25,4 +25,11 @@ public class MessageController {
 		//get the message from a certain user and broadcast to other users.
 		return message;
 	}
+	@Logging
+	@MessageMapping("/heartBit")
+	@SendTo("/topic/heartBit")
+	public void heartBit() throws Exception {
+		//get heartBit from client.
+		return;
+	}	
 }
